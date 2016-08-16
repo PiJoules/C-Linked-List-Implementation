@@ -2,6 +2,7 @@
 #include "linked_list.h"
 
 #define SIMPLE_VOID(var) (void* (*)(void*))var
+#define SIMPLE_COMP(var) (int (*)(void*, void*))var
 
 /**
  * Custom strdup function for testing.
@@ -23,7 +24,7 @@ static int str_equal(const char* str1, const char* str2){
 }
 
 int main(int argc, char* argv[]){
-    LinkedList* ll = ll_create(free, SIMPLE_VOID(str_copy), str_equal);
+    LinkedList* ll = ll_create(free, SIMPLE_VOID(str_copy), SIMPLE_COMP(str_equal));
 
     assert(ll->size == 0);
     assert(ll->head == NULL);

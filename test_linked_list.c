@@ -60,7 +60,14 @@ int main(int argc, char* argv[]){
     str = ll_str(copied_ll);
     printf("%s\n", str);
     free(str);
-    
+
+
+    ll_remove_value(ll, "val2");
+    ll_remove_value(ll, "val4");
+    assert(ll->size == 0);
+    str = ll_str(ll);
+    printf("%s\n", str);
+    free(str);
 
     ll_free(ll);
     ll_free(copied_ll);

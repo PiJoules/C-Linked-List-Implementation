@@ -29,5 +29,6 @@ void ll_remove(LinkedList* ll, size_t idx);
 LinkedList* ll_copy(LinkedList* ll);
 int ll_equal(LinkedList* ll, LinkedList* other);
 char* ll_str(LinkedList* ll);
+void ll_remove_value(LinkedList* ll, void* value);
 
 #endif

@@ -6,7 +6,7 @@ OBJECTS = linked_list.o
 
 CC = gcc
 CSTANDARD = c99
-override CFLAGS += -std=$(CSTANDARD) -Wall
+override CFLAGS += -std=$(CSTANDARD) -Wall -Werror
 
 all: $(EXE)
 
